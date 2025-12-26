@@ -1,7 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
 import Mainlayout from "./Components/Layouts/Mainlayout";
-import Home from "./Components/pages/Home";
+import Home from "./pages/Home";
 import { homeRoutes } from "./utils/routes";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 // import {QueryClientProvider} from "@tanstack/react-query"

@@ -8,25 +8,24 @@ const Header = () => {
     <header className="w-full fixed top-0 left-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-16">
-
           {/* LOGO */}
-          <Link to="/" className="text-white text-xl font-extrabold tracking-wide">
+          <Link
+            to="/"
+            className="text-white text-xl font-extrabold tracking-wide"
+          >
             YourBrand
           </Link>
 
           {/* DESKTOP MENU */}
           <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
-            <Link
-              to="/"
-              className="text-gray-300 hover:text-white transition"
-            >
-              Home
+            <Link to="/" className="text-gray-300 hover:text-white transition">
+              Products
             </Link>
             <Link
-              to="/about"
+              to="/users"
               className="text-gray-300 hover:text-white transition"
             >
-              About
+              Users
             </Link>
             <Link
               to="/services"

@@ -1,13 +1,28 @@
-import About from "../Components/pages/About";
-import Home from "../Components/pages/Home";
+import Home from "../pages/Home";
+import Login from "../pages/Login";
+import Product from "../pages/Product";
+import Register from "../pages/Registration";
+import Users from "../pages/Users";
 
 export const homeRoutes = [
   {
     path: "/",
-    element: <Home />
+    element: <Home />,
   },
   {
-    path: "/about",
-    element: <About />
+    path: "/product/:id",
+    element: <Product />,
+  },
+  {
+    path: "/login",
+    element: <Login />,
+  },
+  {
+    path: "/register",
+    element: <Register />,
+  },
+  {
+    path: "/users",
+    element: <Users />,
   },
 ];
