@@ -42,12 +42,19 @@ const Header = () => {
           </nav>
 
           {/* CTA (DESKTOP) */}
-          <div className="hidden md:block">
+          <div className="hidden md:block d-flex gap-2">
             <Link
-              to="/contact"
+              to="/login"
               className="px-5 py-2 rounded-full bg-white text-black font-semibold hover:bg-gray-200 transition"
             >
-              Get Started
+              Login
+            </Link>
+
+            <Link
+              to="/profile"
+              className="px-5 py-2 rounded-full bg-white text-black font-semibold hover:bg-gray-200 transition ml-2"
+            >
+              Profile
             </Link>
           </div>
 

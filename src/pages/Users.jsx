@@ -36,10 +36,10 @@ const Users = () => {
   console.log("sadsa", data);
 
   return (
-    <main className="w-full bg-gray-50 min-h-screen">
+    <main className="w-full bg-gray-50 min-h-screen pt-16">
       {/* ================= HEADER ================= */}
       <section className="py-16 bg-black text-white text-center">
-        <h1 className="text-4xl md:text-5xl font-extrabold">Our Products</h1>
+        <h1 className="text-4xl md:text-5xl font-extrabold">Our Users</h1>
         <p className="mt-4 text-gray-400 max-w-2xl mx-auto">
           Explore high-quality products crafted with precision and modern
           design.

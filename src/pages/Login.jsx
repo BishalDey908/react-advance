@@ -29,7 +29,7 @@ const Login = () => {
         // Example: save token
         localStorage.setItem("accessToken", data?.accessToken);
   
-        navigate("/"); // redirect after login
+        navigate("/profile"); // redirect after login
       }
     },
     onError: (error) => {

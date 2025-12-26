@@ -5,46 +5,72 @@ const api = axios.create({
 });
 
 //Fetch data
-export const fetchProducts = async( {limit, skip} ) => {
+export const fetchProducts = async ({ limit, skip }) => {
   try {
     const res = await api.get(`/products?limit=${limit}&skip=${skip}`);
-    
+
     return res?.status === 200 ? res?.data : [];
   } catch (err) {
-    console.log(err)
-  };
+    console.log(err);
+  }
 };
 
 //Fetch single Product data
 export const fetchSingleProduct = async (id) => {
   try {
     const res = await api.get(`/products/${id}`);
-    console.log(res)
+    console.log(res);
     return res?.status === 200 ? res?.data : [];
   } catch (err) {
-    console.log(err)
+    console.log(err);
   }
 };
-
 
 //login
 export const login = async (form) => {
   try {
-    const res = await api.post(`/auth/login`,form);
-    console.log(res)
+    const res = await api.post(`/auth/login`, form);
+    console.log(res);
     return res?.status === 200 ? res?.data : null;
   } catch (err) {
-    console.log(err)
+    console.log(err);
   }
 };
 
 //userData
-export const userSList = async ({limit, skip}) => {
+export const userSList = async ({ limit, skip }) => {
   try {
     const res = await api.get(`/users?limit=${limit}&skip=${skip}`);
-    console.log(res)
+    console.log(res);
     return res?.status === 200 ? res?.data : null;
   } catch (err) {
-    console.log(err)
+    console.log(err);
+  }
+};
+
+//single userData
+export const singleUserData = async (id) => {
+  try {
+    const res = await api.get(`/users/${id}`);
+    console.log(res);
+    return res?.status === 200 ? res?.data : null;
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+//single currentuserData
+const token = localStorage?.getItem("accessToken")
+export const currentuserData = async () => {
+  try {
+    const res = await api.get(`/auth/me`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+    console.log(res);
+    return res?.status === 200 ? res?.data : null;
+  } catch (err) {
+    console.log(err);
   }
 };
